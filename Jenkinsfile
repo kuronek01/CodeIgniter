@@ -6,21 +6,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'develop', url: 'https://github.com/kuronek01/CodeIgniter.git'
-            }
-        }
-	stage('Install Dependencies') {
-    steps {
-        echo 'Installing dependencies...'
-        sh 'composer install --no-dev --optimize-autoloader'
+                git branch: 'main', url: 'https://github.com/kuronek01/CodeIgniter.git'
             }
         }
         stage('Run Tests') {
             steps {
                 echo 'Running tests...'
                 sh 'phpunit --configuration application/tests/phpunit.xml'
-		}
-
             }
             post {
                 success {
