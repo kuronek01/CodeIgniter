@@ -19,6 +19,11 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 sh 'phpunit --configuration application/tests/phpunit.xml'
+				groovy
+				environment {
+    			PATH = '/usr/local/bin:$PATH'
+		}
+
             }
             post {
                 success {
