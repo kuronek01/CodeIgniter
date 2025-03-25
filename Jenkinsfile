@@ -6,7 +6,7 @@ CI_ENV = 'production'
 stages {
 stage('Checkout') {
 steps {
-git branch: 'main', url:
+git branch: 'develop', url:
 'https://github.com/kuronek01/CodeIgniter.git'
 }
 }
