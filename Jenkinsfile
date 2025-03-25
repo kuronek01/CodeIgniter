@@ -7,7 +7,7 @@ stages {
 stage('Checkout') {
 steps {
 git branch: 'develop', url:
-'https://github.com/username/CodeIgniter.git'
+'https://github.com/kuronek01/CodeIgniter.git'
 }
 }
 stage('Install Dependencies') {
