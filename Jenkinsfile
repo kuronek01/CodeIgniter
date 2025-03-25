@@ -10,11 +10,6 @@ git branch: 'develop', url:
 'https://github.com/kuronek01/CodeIgniter.git'
 }
 }
-stage('Install Dependencies') {
-steps {
-sh 'composer install --no-dev --optimize-autoloader'
-}
-}
 stage('Run Tests') {
 steps {
 sh 'phpunit'
